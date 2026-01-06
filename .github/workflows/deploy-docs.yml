@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write # 关键：用于 Pages 部署的身份验证
+  id-token: write # 必须：Pages 部署的身份验证核心
 
 concurrency:
   group: pages
@@ -22,43 +22,43 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 启用 lastUpdated 时需要（VitePress 的更新时间功能）
+          fetch-depth: 0 # 启用 VitePress 的 lastUpdated 功能（可选，移除不影响部署）
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 10.8.0 # 确保 pnpm 版本与本地一致
+          version: 10.8.0 # 与本地 pnpm 版本保持一致
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # 推荐使用 VitePress 支持的 Node.js 版本（18+）
-          cache: 'pnpm' # 缓存 pnpm 依赖，加速构建
+          node-version: 20 # VitePress 要求 Node.js ≥18，20 是稳定选择
+          cache: 'pnpm' # 缓存依赖，加速构建
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
         with:
-          base_path: '' # 关键：明确基础路径，避免权限冲突
-          # 移除 enablement，改用默认配置，减少权限要求
+          enablement: true # 关键：强制创建/配置 Pages 站点，解决 "Not Found" 错误
+          # 移除 base_path！v4 版本不支持该参数，保留会报错
 
       - name: Install dependencies
-        run: pnpm install # 确保本地能正常运行（无依赖报错）
+        run: pnpm install # 本地先运行一次，确保无依赖安装失败
 
       - name: Build VitePress site
-        run: pnpm docs:build # 验证本地是否能运行此命令（pnpm run docs:build）
+        run: pnpm docs:build # 本地验证能成功构建（生成 docs/.vitepress/dist）
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist # 确保本地构建后此路径存在（关键：路径错误会导致部署空站点）
+          path: docs/.vitepress/dist # 必须是 VitePress 的实际构建输出目录
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build # 依赖 build  job 完成
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 # 最新版部署动作，兼容性更好
+        uses: actions/deploy-pages@v4
