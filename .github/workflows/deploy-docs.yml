@@ -3,13 +3,13 @@ name: Deploy VitePress site to Pages
 
 on:
   push:
-    branches: [master] # 如果你用 main 分支，这里改成 main
+    branches: [master] # 按你的默认分支调整（main/master）
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
-  id-token: write
+  id-token: write # 关键：用于 Pages 部署的身份验证
 
 concurrency:
   group: pages
@@ -22,36 +22,43 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 启用 lastUpdated 时需要
-      - uses: pnpm/action-setup@v3
+          fetch-depth: 0 # 启用 lastUpdated 时需要（VitePress 的更新时间功能）
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
         with:
-          version: 10.8.0
-      - name: Setup Node
+          version: 10.8.0 # 确保 pnpm 版本与本地一致
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'pnpm'
-      - name: Setup Pages
+          node-version: 20 # 推荐使用 VitePress 支持的 Node.js 版本（18+）
+          cache: 'pnpm' # 缓存 pnpm 依赖，加速构建
+
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
         with:
-          enablement: true # 可选，强制启用
+          base_path: '' # 关键：明确基础路径，避免权限冲突
+          # 移除 enablement，改用默认配置，减少权限要求
+
       - name: Install dependencies
-        run: pnpm install
-      - name: Build with VitePress
-        run: pnpm docs:build # 确保 package.json 中有这个脚本
-      - name: Upload artifact
+        run: pnpm install # 确保本地能正常运行（无依赖报错）
+
+      - name: Build VitePress site
+        run: pnpm docs:build # 验证本地是否能运行此命令（pnpm run docs:build）
+
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist # 确保这个路径是正确的构建输出目录
+          path: docs/.vitepress/dist # 确保本地构建后此路径存在（关键：路径错误会导致部署空站点）
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
+    needs: build # 依赖 build  job 完成
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # 最新版部署动作，兼容性更好
