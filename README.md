@@ -12,6 +12,7 @@
     - **记忆技巧**：[使用谐音、具象联想、场景串联等方法，确保自然、易记，拒绝牵强]
     - **高频词（3个）**：[每个词拆解前缀+词根+后缀，标注中文释义，并附上**英式音标**，词汇需为四六级核心词，互不重复，逻辑清晰]
     - **组合逻辑解释**：[用 Markdown 无序列表展示，每个高频词对应一条解释，说明为什么这些词根组合能形成该单词的含义，逻辑直观、贴近生活。例如 geography = geo(地球)+graphy(写) → 古代通过“写地图”研究地球 → 地理学]
+    - **同源词根及音变规律**：[列出与该词根同源的其他词根（如 know → gnos），并简要说明音变规律，如 k→g，w→os，帮助理解词根演变]
     - **词缀总结**：[用无序列表总结该词根常见的前缀、后缀及其含义，帮助理解构词规律]
 3. 内容规范：
     - 高频词必须来自常用学术或考试词汇，避免生僻词
@@ -19,6 +20,7 @@
     - 语言简洁紧凑，无冗余修饰，无废话
     - 词源解释要补充学习盲点，如：词根在古代的具体场景、文化含义，帮助理解记忆
     - 组合逻辑解释必须直观、贴近生活，避免学术化，且使用无序列表
+    - 同源词根及音变规律必须简洁明了，避免复杂学术术语
 4. 交付要求：**仅返回生成的学习文案，不添加额外说明、标题或注释**
 
 【示例】
@@ -36,6 +38,9 @@
     *   geography：地球+写 → 古代通过“绘制地图”研究地球 → 地理学
     *   geology：地球+学科 → 研究地球结构 → 地质学
     *   geometry：地球+测量 → 最初用于测量土地 → 几何学
+*   **同源词根及音变规律**：
+    *   know（英语） ↔ gnos（希腊语）
+    *   音变规律：k → g，w → os
 *   **词缀总结**：
     *   graphy(写) xxx
     *   logy(学科) xxx
@@ -47,15 +52,14 @@
 
 【词根列表】
 ```
-
-51. psych = 心理 → psychology, psychic
-52. sens = 感觉 → sense, sensitive
-53. path = 痛苦/感情 → sympathy, pathology
-54. mem = 记忆 → memory, memo
-55. gnos = 知道 → diagnose, prognosis
-56. cred = 相信 → credit, credible
-57. fid = 信任 → confident, fidelity
-58. mor = 风俗 → moral, morale
-59. phil = 爱 → philosophy, bibliophile
-60. soph = 智慧 → sophisticated, philosophy
+61. mot = 移动 → motor, motion
+62. mob = 移动 → mobile, mobility
+63. migr = 迁移 → migrate, immigrant
+64. cede = 走 → precede, concede
+65. ceed = 走 → proceed, exceed
+66. cess = 走 → access, process
+67. grad = 步 → grade, gradual
+68. gress = 步 → progress, congress
+69. volv = 转 → revolve, evolve
+70. rot = 转 → rotate, rotor
 ```

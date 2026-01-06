@@ -3,15 +3,13 @@ import llmstxt from "vitepress-plugin-llms";
 import { teekConfig } from "./teekConfig";
 
 const description = [
-  "欢迎来到 vitepress-theme-teek 使用文档",
-  "Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置",
-  "Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景",
+  "欢迎来到 English-Learn，这是一个使用 Teek 主题构建的英语学习网站。"
 ].toString();
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: teekConfig,
-  title: "vitepress-theme-teek",
+  title: "English-Learn",
   description: description,
   cleanUrls: false,
   lastUpdated: true,
@@ -24,13 +22,13 @@ export default defineConfig({
     ["link", { rel: "icon", type: "image/png", href: "/teek-logo-mini.png" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:locale", content: "zh-CN" }],
-    ["meta", { property: "og:title", content: "Teek | VitePress Theme" }],
-    ["meta", { property: "og:site_name", content: "Teek" }],
+    ["meta", { property: "og:title", content: "English-Learn" }],
+    ["meta", { property: "og:site_name", content: "Entity-Now" }],
     ["meta", { property: "og:image", content: "" }],
     ["meta", { property: "og:url", content: "" }],
     ["meta", { property: "og:description", description }],
     ["meta", { name: "description", description }],
-    ["meta", { name: "author", content: "Teek" }],
+    ["meta", { name: "author", content: "Entity-Now" }],
     // 禁止浏览器缩放
     // [
     //   "meta",
@@ -118,7 +116,7 @@ export default defineConfig({
     editLink: {
       text: "在 GitHub 上编辑此页",
       pattern:
-        "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
+        "https://github.com/Entity-Now/Learn-English/tree/master/docs/:path",
     },
   },
   vite: {
