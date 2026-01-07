@@ -52,14 +52,14 @@
 
 【词根列表】
 ```
-61. mot = 移动 → motor, motion
-62. mob = 移动 → mobile, mobility
-63. migr = 迁移 → migrate, immigrant
-64. cede = 走 → precede, concede
-65. ceed = 走 → proceed, exceed
-66. cess = 走 → access, process
-67. grad = 步 → grade, gradual
-68. gress = 步 → progress, congress
-69. volv = 转 → revolve, evolve
-70. rot = 转 → rotate, rotor
+1. act = 做 → action, active
+2. ag = 做 → agent, agenda
+3. oper = 工作 → operate, operation
+4. fac/fact = 做 → factory, manufacture
+5. fic = 做 → fiction, artificial
+6. pos = 放 → position, deposit
+7. pon = 放 → component, opponent
+8. cap = 拿 → capture, capable
+9. cept = 拿 → accept, concept
+10. cip = 拿 → participate, anticipate
 ```
