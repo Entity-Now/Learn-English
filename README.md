@@ -52,14 +52,14 @@
 
 【词根列表】
 ```
-1. act = 做 → action, active
-2. ag = 做 → agent, agenda
-3. oper = 工作 → operate, operation
-4. fac/fact = 做 → factory, manufacture
-5. fic = 做 → fiction, artificial
-6. pos = 放 → position, deposit
-7. pon = 放 → component, opponent
-8. cap = 拿 → capture, capable
-9. cept = 拿 → accept, concept
-10. cip = 拿 → participate, anticipate
+91. manu = 手 → manual, manufacture
+92. ped = 脚 → pedal, pedestrian
+93. dent = 牙 → dental, dentist
+94. derm = 皮肤 → dermatology, epidermis
+95. cardi = 心脏 → cardiac, cardiology
+96. neur = 神经 → neuron, neurology
+97. oste = 骨 → osteoporosis, osteology
+98. hemat = 血 → hematology, hemoglobin
+99. pod = 足 → podiatrist, tripod
+100. cephal = 头 → encephalitis, cephalopod
 ```
