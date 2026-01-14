@@ -52,16 +52,16 @@
 
 【词根列表】
 ```
-91. manu = 手 → manual, manufacture
-92. ped = 脚 → pedal, pedestrian
-93. dent = 牙 → dental, dentist
-94. derm = 皮肤 → dermatology, epidermis
-95. cardi = 心脏 → cardiac, cardiology
-96. neur = 神经 → neuron, neurology
-97. oste = 骨 → osteoporosis, osteology
-98. hemat = 血 → hematology, hemoglobin
-99. pod = 足 → podiatrist, tripod
-100. cephal = 头 → encephalitis, cephalopod
+101.    jur \[/dʒʊr/] = 法律 → jury, jurisdiction
+102.    leg \[/lɛɡ/] = 法律 → legal, legislate
+103.    crim \[/krɪm/] = 罪 → criminal, incriminate
+104.    civ \[/sɪv/] = 公民 → civil, civilization
+105.    polit \[/ˈpɒlɪt/] = 城市/政治 → politics, metropolitan
+106.    reg \[/rɛɡ/] = 统治 → regulate, regime
+107.    domin \[/ˈdɒmɪn/] = 主宰 → dominate, domain
+108.    liber \[/ˈlɪbər/] = 自由 → liberty, liberal
+109.    serv \[/sɜːrv/] = 服务 → serve, service
+110.    soc \[/soʊʃ/] = 伙伴 → social, associate
 ```
 
 
