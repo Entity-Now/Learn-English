@@ -52,16 +52,16 @@
 
 【词根列表】
 ```
-101.    jur \[/dʒʊr/] = 法律 → jury, jurisdiction
-102.    leg \[/lɛɡ/] = 法律 → legal, legislate
-103.    crim \[/krɪm/] = 罪 → criminal, incriminate
-104.    civ \[/sɪv/] = 公民 → civil, civilization
-105.    polit \[/ˈpɒlɪt/] = 城市/政治 → politics, metropolitan
-106.    reg \[/rɛɡ/] = 统治 → regulate, regime
-107.    domin \[/ˈdɒmɪn/] = 主宰 → dominate, domain
-108.    liber \[/ˈlɪbər/] = 自由 → liberty, liberal
-109.    serv \[/sɜːrv/] = 服务 → serve, service
-110.    soc \[/soʊʃ/] = 伙伴 → social, associate
+111.    merc \[/mɜːrk/] = 商业 → merchant, commerce
+112.    nom \[/nɒm/] = 规则/分配 → economy, autonomy
+113.    deb \[/dɛb/] = 欠 → debit, debtor  **（替换 cred）**
+114.    fin \[/fɪn/] = 结束/界限 → finance, final
+115.    valu \[/ˈvæljuː/] = 价值 → value, evaluate
+116.    tax \[/tæks/] = 安排 → tax, taxation
+117.    patr \[/ˈpætr/] = 父亲/家族 → patron, patriarch
+118.    matr \[/ˈmætr/] = 母亲 → matriarch, maternal
+119.    corpor \[/ˈkɔːrpər/] = 身体/公司 → corporation, corporate
+120.    priv \[/prɪv/] = 私人 → private, privilege
 ```
 
 
